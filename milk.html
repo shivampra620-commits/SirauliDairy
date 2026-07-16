@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milk Collection</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🥛 Milk Collection</h1>
+
+<select id="farmerSelect">
+    <option value="">Select Farmer</option>
+</select>
+
+<input type="date" id="date">
+
+<select id="session">
+    <option value="Morning">🌞 Morning</option>
+    <option value="Evening">🌙 Evening</option>
+</select>
+
+<input type="number" id="liter" placeholder="Milk (Liter)">
+<input type="number" id="fat" placeholder="Fat %">
+<input type="number" id="rate" placeholder="Rate ₹">
+
+<button onclick="saveMilk()">💾 Save Milk</button>
+
+<hr>
+
+<h2>Milk List</h2>
+
+<table border="1" width="100%">
+
+<thead>
+<tr>
+<th>Farmer</th>
+<th>Date</th>
+<th>Session</th>
+<th>Liter</th>
+<th>Fat</th>
+<th>Rate</th>
+<th>Total</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+</thead>
+
+<tbody id="milkTable">
+</tbody>
+
+</table>
+
+<br>
+
+<button onclick="window.location.href='dashboard.html'">
+🏠 Dashboard
+</button>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase Config -->
+<script src="firebase.js"></script>
+
+<!-- Milk JS -->
+<script src="milk.js"></script>
+
+</body>
+</html>

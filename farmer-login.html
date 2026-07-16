@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👨‍🌾 Farmer Login</h1>
+
+    <input
+        type="text"
+        id="farmerId"
+        placeholder="Farmer ID (F001)">
+
+    <input
+        type="text"
+        id="mobile"
+        placeholder="Mobile Number">
+
+    <button onclick="farmerLogin()">
+        Login
+    </button>
+
+    <p id="msg"></p>
+
+    <br>
+
+    <button onclick="window.location.href='index.html'">
+        🔙 Admin Login
+    </button>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase -->
+<script src="firebase.js"></script>
+
+<!-- Farmer Login -->
+<script src="farmer-login.js"></script>
+
+</body>
+</html>

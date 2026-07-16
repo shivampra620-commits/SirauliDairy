@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🐄 Farmer Registration</h1>
+
+    <input type="text"
+           id="name"
+           placeholder="Farmer Name">
+
+    <input type="tel"
+           id="mobile"
+           placeholder="Mobile Number">
+
+    <input type="text"
+           id="village"
+           placeholder="Village">
+
+    <button onclick="saveFarmer()">
+        Save Farmer
+    </button>
+
+    <hr>
+
+    <h2>Farmer List</h2>
+
+    <table border="1" width="100%">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Village</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody id="farmerTable">
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <button onclick="window.location.href='dashboard.html'">
+        Dashboard
+    </button>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase Config -->
+<script src="firebase.js"></script>
+
+<!-- Farmers JS -->
+<script src="farmers.js"></script>
+
+</body>
+</html>

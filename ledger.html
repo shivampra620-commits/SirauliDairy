@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Farmer Ledger</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📒 Farmer Ledger</h1>
+
+<select id="farmerSelect">
+    <option value="">Select Farmer</option>
+</select>
+
+<br><br>
+
+<label>From Date</label>
+<input type="date" id="fromDate">
+
+<label>To Date</label>
+<input type="date" id="toDate">
+
+<br><br>
+
+<button onclick="loadLedger()">
+🔍 View Ledger
+</button>
+
+<hr>
+
+<h3 id="summary">
+🥛 Total Milk : 0 L<br>
+💰 Total Amount : ₹0<br>
+💵 Total Paid : ₹0<br>
+📌 Balance : ₹0
+</h3>
+
+<button onclick="downloadLedger()">
+📄 Download PDF
+</button>
+
+<hr>
+
+<table border="1" width="100%">
+
+<thead>
+
+<tr>
+<th>Date</th>
+<th>Session</th>
+<th>Liter</th>
+<th>Fat</th>
+<th>Rate</th>
+<th>Amount</th>
+</tr>
+
+</thead>
+
+<tbody id="ledgerTable">
+
+</tbody>
+
+</table>
+
+<br>
+
+<button onclick="window.location.href='dashboard.html'">
+🏠 Dashboard
+</button>
+
+</div>
+
+<!-- jsPDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase -->
+<script src="firebase.js"></script>
+
+<!-- Ledger JS -->
+<script src="ledger.js"></script>
+
+</body>
+</html>

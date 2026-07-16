@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sirauli Dairy Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🥛 Sirauli Dairy</h1>
+
+<h2>Dashboard</h2>
+
+<hr>
+
+<h3>👨‍🌾 Total Farmers : <span id="farmerCount">0</span></h3>
+
+<h3>🥛 Total Milk : <span id="milkCount">0</span> L</h3>
+
+<h3>💰 Total Payment : ₹<span id="paymentCount">0</span></h3>
+
+<hr>
+
+<button onclick="location.href='farmers.html'">
+👨‍🌾 Farmer Registration
+</button>
+
+<br><br>
+
+<button onclick="location.href='milk.html'">
+🥛 Milk Entry
+</button>
+
+<br><br>
+
+<button onclick="location.href='report.html'">
+📊 Reports
+</button>
+
+<hr>
+
+<h3>🔑 Change Password</h3>
+
+<input
+type="password"
+id="oldPassword"
+placeholder="Old Password">
+
+<input
+type="password"
+id="newPassword"
+placeholder="New Password">
+
+<button onclick="changePassword()">
+Update Password
+</button>
+
+<hr>
+
+<button onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase Config -->
+<script src="firebase.js"></script>
+
+<!-- Dashboard JS -->
+<script src="dashboard.js"></script>
+
+</body>
+</html>

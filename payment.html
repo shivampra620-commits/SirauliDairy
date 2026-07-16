@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+< lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<>
+
+<div class="container">
+
+<h1>💰 Farmer Payment</h1>
+
+<select id="farmer">
+    <option value="">Select Farmer</option>
+</select>
+
+<br><br>
+
+<label>From Date</label>
+
+<input type="date" id="fromDate">
+
+<br><br>
+
+<label>To Date</label>
+
+<input type="date" id="toDate">
+
+<br><br>
+
+<button onclick="calculatePayment()">
+Calculate Payment
+</button>
+
+<hr>
+
+<h3>Total Milk : <span id="milk">0</span> L</h3>
+
+<h3>Total Amount : ₹<span id="amount">0</span></h3>
+
+<br>
+
+<label>Paid Amount</label>
+<h3>Balance : ₹<span id="balance">0</span></h3>
+<input type="number" id="paid" placeholder="Enter Paid Amount">
+
+<br><br>
+
+<button onclick="savePayment()">
+Save Payment
+</button>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase Config -->
+<script src="firebase.js"></script>
+
+<!-- Payment JS -->
+<script src="payment.js"></script>
+
+</body>
+</html>

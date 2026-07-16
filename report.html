@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+< lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Report</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<>
+
+<div class="container">
+
+    <h1>🥛 Milk Report</h1>
+
+    <select id="farmerFilter">
+        <option value="">All Farmers</option>
+    </select>
+
+    <br><br>
+
+    <label>From Date</label><br>
+    <input type="date" id="fromDate">
+
+    <br><br>
+
+    <label>To Date</label><br>
+    <input type="date" id="toDate">
+
+    <br><br>
+
+    <button onclick="loadReport()">
+        📊 Generate Report
+    </button>
+
+    <hr>
+
+    <table border="1" width="100%">
+
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Farmer</th>
+                <th>Liter</th>
+                <th>Fat</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+
+        <tbody id="reportTable">
+
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <h3 id="summary">
+        🥛 Total Milk : 0 L
+        <br><br>
+        💰 Total Amount : ₹0
+        <br><br>
+        📋 Total Entries : 0
+    </h3>
+
+    <br>
+
+    <button onclick="printReport()">
+        🖨️ Print Report
+    </button>
+
+    <br><br>
+
+    <button onclick="window.location.href='dashboard.html'">
+        ⬅ Back
+    </button>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase Config -->
+<script src="firebase.js"></script>
+
+<!-- Report JS -->
+<script src="report.js"></script>
+
+</body>
+</html>

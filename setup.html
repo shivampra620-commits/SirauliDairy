@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirauli Dairy - Admin Setup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🥛 Sirauli Dairy</h1>
+
+    <h2>First Time Admin Setup</h2>
+
+    <input
+        type="text"
+        id="newUsername"
+        placeholder="Admin Username">
+
+    <input
+        type="password"
+        id="newPassword"
+        placeholder="Admin Password">
+
+    <button onclick="saveAdmin()">
+        💾 Save Admin
+    </button>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-database-compat.js"></script>
+
+<!-- Firebase Config -->
+<script src="firebase.js"></script>
+
+<!-- Login JS -->
+<script src="login.js"></script>
+
+</body>
+</html>
