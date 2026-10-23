@@ -152,18 +152,25 @@ function editFarmer(index) {
 }
 
 // Delete Farmer
+
 function deleteFarmer(index) {
-
-    if (confirm("Delete this Farmer?")) {
-
-        farmers.splice(index, 1);
-
-        localStorage.setItem("farmers", JSON.stringify(farmers));
-
-        showFarmers();
-
-        alert("✅ Farmer Deleted");
-
+    if (!confirm("Delete this Farmer?")) {
+        return;
     }
 
+    const farmer = farmers[index];
+
+    if (!farmer || !farmer.firebaseKey) {
+        alert("Farmer record not found!");
+        return;
+    }
+
+    farmersRef.child(farmer.firebaseKey).remove()
+        .then(function () {
+            alert("Farmer Deleted Successfully");
+        })
+        .catch(function (error) {
+            console.error("Delete error:", error);
+            alert("Delete failed: " + error.message);
+        });
 }
