@@ -153,10 +153,9 @@ function editFarmer(index) {
 
 // Delete Farmer
 
+
 function deleteFarmer(index) {
-    if (!confirm("Delete this Farmer?")) {
-        return;
-    }
+    if (!confirm("Delete this Farmer?")) return;
 
     const farmer = farmers[index];
 
@@ -167,10 +166,9 @@ function deleteFarmer(index) {
 
     farmersRef.child(farmer.firebaseKey).remove()
         .then(function () {
-            alert("Farmer Deleted Successfully");
+            alert("Delete successful in Firebase");
         })
         .catch(function (error) {
-            console.error("Delete error:", error);
-            alert("Delete failed: " + error.message);
+            alert("Firebase Delete Error: " + error.message);
         });
 }
